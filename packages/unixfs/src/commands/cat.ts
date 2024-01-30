@@ -13,9 +13,10 @@ const defaultOptions: CatOptions = {
 }
 
 export async function * cat (cid: CID, blockstore: Blocks, options: Partial<CatOptions> = {}): AsyncIterable<Uint8Array> {
+  const blocks = await (blockstore.createSession != null ? blockstore.createSession(cid) : blockstore)
   const opts: CatOptions = mergeOptions(defaultOptions, options)
-  const resolved = await resolve(cid, opts.path, blockstore, opts)
-  const result = await exporter(resolved.cid, blockstore, opts)
+  const resolved = await resolve(cid, opts.path, blocks, opts)
+  const result = await exporter(resolved.cid, blocks, opts)
 
   if (result.type !== 'file' && result.type !== 'raw') {
     throw new NotAFileError()

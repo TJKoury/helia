@@ -53,10 +53,10 @@
     "test:electron-main": "aegir test -t electron-main"
   },
   "dependencies": {
+    "@helia/bitswap": "^0.0.0",
     "@helia/interface": "^3.0.1",
     "@libp2p/interface": "^1.1.1",
     "interface-blockstore": "^5.2.7",
-    "ipfs-bitswap": "^20.0.0",
     "multiformats": "^13.0.0",
     "progress-events": "^1.0.0"
   },
