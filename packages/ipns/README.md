@@ -30,7 +30,7 @@ const helia = await createHelia()
 const name = ipns(helia)
 
 // create a public key to publish as an IPNS name
-const keyInfo = await helia.libp2p.services.keychain.createKey('my-key')
+const keyInfo = await helia.libp2p.services.keychain.createKey('my-key', 'secp256k1')
 const peerId = await helia.libp2p.services.keychain.exportPeerId(keyInfo.name)
 
 // store some data to publish
@@ -41,7 +41,7 @@ const cid = await fs.add(Uint8Array.from([0, 1, 2, 3, 4]))
 await name.publish(peerId, cid)
 
 // resolve the name
-const cid = name.resolve(peerId)
+const rcid = name.resolve(peerId)
 ```
 
 ## Example - Using custom PubSub router
