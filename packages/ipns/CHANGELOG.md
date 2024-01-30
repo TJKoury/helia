@@ -14,6 +14,13 @@
 
 * make @libp2p/interface a dependency ([#159](https://github.com/ipfs/helia-ipns/issues/159)) ([546ecf0](https://github.com/ipfs/helia-ipns/commit/546ecf023bd619d32e187fa6a55d39fcf12e4bbe)), closes [#158](https://github.com/ipfs/helia-ipns/issues/158)
 
+## [5.0.1](https://github.com/ipfs/helia/compare/ipns-v5.0.0...ipns-v5.0.1) (2024-01-30)
+
+
+### Bug Fixes
+
+* export IPNSRoutingEvents ([#407](https://github.com/ipfs/helia/issues/407)) ([44f4e88](https://github.com/ipfs/helia/commit/44f4e88030a21d86b2a8473d3d00efb624cfce8f))
+
 ## [5.0.0](https://github.com/ipfs/helia/compare/ipns-v4.0.0...ipns-v5.0.0) (2024-01-24)
 
 
